@@ -1,0 +1,43 @@
+Tudo sobre processadores em 1 minuto
+
+Pra começar dependendo da fabricante a maneira de montar vai ser diferente
+
+(Ue mas como assim)
+
+Se acalma boca de cassapa que eu vou explicar
+
+Nos processadores AMD os pinos ficam no próprio processador 
+
+e oque você precisa é só encaixar na placa mãe
+
+que é a chamada de Tecnologia PGA
+
+repetindo é pra encaixar, não esfolar o bagulho
+
+se não você vai acabar entortando a poha do pino
+
+e dependo do estrago tu vai precisar comprar outro
+
+mas relaxa que nos mais novos a AMD mudou pra algo parecido com a Intel
+
+e falando no diabo
+
+Na Intel é usada a Tecnologia LGA, onde os pinos ficam na própria placa mãe
+
+e o processador tem apenas os pontos de contato 
+
+mas isso não significa que os pinos não entortam então manera nessa força projeto de hulk magrelo
+
+os processadores são divididos em gerações
+
+por exemplo, i3 i5 i7 e o i9
+
+sim eles sempre pulam os números pares por puro marketing
+
+o i3 é para tarefas mais básicas
+
+i5 para alto desempenho de baixo custo
+
+i7 para softwares de edição de vídeo, imagem e jogos pesados
+
+e o i9 para softwares ainda mais pesados como os da área de engenharia e arquitetura
