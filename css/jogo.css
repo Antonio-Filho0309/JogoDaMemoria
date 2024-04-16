@@ -13,19 +13,33 @@
     aspect-ratio: 3/4;
     border-radius: 5px;
     position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
 }
 
 .face{
     width: 100%;
     height: 100%;
     position: absolute;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #eee;
+    border-radius: 5px;
 }
 
 
 .front{
-    background-color: red;
+    background-image: url('../IMAGES/FORTALEZA.jpg');
+    transform: rotateY(180deg);
 }
 
 .back{
-    background-image: url('../IMAGES/');
+    background-image: url('../IMAGES/697553.png');
+    background-size: cover;
+    background-position: center;
+    backface-visibility: hidden;
+}
+
+.card:hover{
+ transform: rotateY(180deg);
 }
