@@ -20,21 +20,51 @@ const createElement = (tag, className) => {
 
 let firstCard = "";
 let secondCard = "";
+
+const checkEndGame = () => {
+  const disabledCards = document.querySelectorAll('.disabled-card');
+
+  if(disabledCards.length === 18){
+      window.alert('Parabéns, você conseguiu!');
+  }
+};
+
+const checkCards = () => {
+  const firstTime = firstCard.getAttribute("data-time");
+  const secondTime = secondCard.getAttribute("data-time");
+
+  if (firstTime === secondTime) {
+    firstCard.firstChild.classList.add("disabled-card");
+    secondCard.firstChild.classList.add("disabled-card");
+    firstCard = "";
+    secondCard = "";
+
+    checkEndGame();
+    
+  } else {
+    setTimeout(() => {
+      firstCard.classList.remove("reveal-card");
+      secondCard.classList.remove("reveal-card");
+
+      firstCard = "";
+      secondCard = "";
+    }, 500);
+  }
+};
 const revealCard = ({ target }) => {
   if (target.parentNode.className.includes("reveal-card")) {
     return;
   }
 
-  if(firstCard === ''){
+  if (firstCard === "") {
     target.parentNode.classList.add("reveal-card");
     firstCard = target.parentNode;
-  }else if (secondCard ===''){
+  } else if (secondCard === "") {
     target.parentNode.classList.add("reveal-card");
     secondCard = target.parentNode;
 
     checkCards();
   }
-  
 };
 
 const createCard = (time) => {
@@ -47,6 +77,7 @@ const createCard = (time) => {
   card.appendChild(back);
 
   card.addEventListener("click", revealCard);
+  card.setAttribute("data-time", time);
 
   return card;
 };
