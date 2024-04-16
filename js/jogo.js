@@ -1,4 +1,6 @@
 const grid = document.querySelector(".grid");
+const spanPlayer = document.querySelector(".jogador");
+const timer = document.querySelector(".timer");
 
 const times = [
   "bahia",
@@ -22,10 +24,11 @@ let firstCard = "";
 let secondCard = "";
 
 const checkEndGame = () => {
-  const disabledCards = document.querySelectorAll('.disabled-card');
+  const disabledCards = document.querySelectorAll(".disabled-card");
 
-  if(disabledCards.length === 18){
-      window.alert('Parabéns, você conseguiu!');
+  if (disabledCards.length === 18) {
+    clearInterval(this.loop);
+    window.alert(`Parabéns ${spanPlayer.innerHTML}!!!!!   seu tempo foi: ${timer.innerHTML}`);
   }
 };
 
@@ -40,7 +43,6 @@ const checkCards = () => {
     secondCard = "";
 
     checkEndGame();
-    
   } else {
     setTimeout(() => {
       firstCard.classList.remove("reveal-card");
@@ -93,4 +95,15 @@ const loadGame = () => {
   });
 };
 
-loadGame();
+const startTimer = () => {
+  this.loop = setInterval(() => {
+    const currentTime = +timer.innerHTML;
+    timer.innerHTML = currentTime +1;
+  }, 1000);
+};
+
+window.onload = () => {
+  spanPlayer.innerHTML = localStorage.getItem("player");
+  startTimer();
+  loadGame();
+};
